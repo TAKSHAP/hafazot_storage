@@ -19,7 +19,6 @@ from django.conf import settings
 from django.conf.urls.static import static
 from core.views import view_file
 from django.views.generic.base import RedirectView
-from django.contrib.staticfiles.storage import staticfiles_storage
 
 
 urlpatterns = [
