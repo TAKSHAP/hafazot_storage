@@ -1,1 +1,1 @@
-web: gunicorn hafazot_storage.wsgi
+web: gunicorn hafazot_storage.wsgi --log-file -
