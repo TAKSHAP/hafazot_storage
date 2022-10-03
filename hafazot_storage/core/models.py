@@ -13,12 +13,12 @@ class Item(models.Model):
 
     def save(self, *args, **kwargs):
         self.slug = slugify(time.time())
-        self.copy_link = settings.WEBSITE_URL + '/' + str(self.slug)
+        self.copy_link = settings.PASTE_WEBSITE_URL + '/' + str(self.slug)
         super(Item, self).save(*args, **kwargs)
 
     def get_file(self):
         if self.file:
             print('here: ' + self.file.url)
-            return settings.WEBSITE_URL + self.file.url
+            return settings.PASTE_WEBSITE_URL + self.file.url
         return ''
 
